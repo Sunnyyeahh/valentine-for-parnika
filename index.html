@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 15px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .yes {
+      background: #ff4b7d;
+      color: white;
+    }
+
+    .no {
+      background: #555;
+      color: white;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="container" id="questionPage">
+    <h1>Parnika 💖<br>Will you be my Valentine? 🌹</h1>
+    <button class="yes" onclick="showLove()">YES 💕</button>
+    <button class="no" onmouseover="moveNo()">NO 🙈</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="container hidden" id="lovePage">
+    <h1>💘 My Love 💘</h1>
+
+    <p class="message">
+      Pari 💖 From the moment when you first came into my life, my life has been
+      warmer, happier, brighter. You make me the most happiest boy on the earth.
+      Tum meri itni care krti ho, you love me so muchhh and I am so grateful that
+      you came into my life and I'll always be grateful and I loveeee youu sooo
+      sooo much.
+
+      <br><br>
+
+      I'll always love you the most through ups and downs, through each and every
+      situation and I'll never ever leave you. I'll always stay with you forever
+      and I'll give you all the happiness of the world.
+
+      <br><br>
+
+      For me you are my heartbeat, my happiness, my everything. I wanna marry you
+      and annoy you for the rest of my life and I pray that we stay together forever
+      in each and every universe in every lifetime.
+
+      <br><br>
+
+      I loveeeee youuuu soo much and I loveeee US so muchh 💕  
+      mwaaaah my cutieee patootiee  
+      my babyyyy  
+      myyy sweetheart  
+      meri jaanu 💖💖💖
+    </p>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+      <source src="https://dl.sndup.net/ykj5/love.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById("questionPage").classList.add("hidden");
+      document.getElementById("lovePage").classList.remove("hidden");
+    }
+
+    function moveNo() {
+      const btn = document.querySelector(".no");
+      btn.style.left = Math.random() * 200 - 100 + "px";
+      btn.style.top = Math.random() * 200 - 100 + "px";
+    }
+  </script>
+
+</body>
+</html>
